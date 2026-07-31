@@ -14,4 +14,6 @@ public class CreateMemberRequest {
 
     @Size(min = 4, max = 4)
     private String mbti;
+
+    private String profileImageUrl;
 }

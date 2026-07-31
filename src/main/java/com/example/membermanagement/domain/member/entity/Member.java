@@ -1,30 +1,36 @@
 package com.example.membermanagement.domain.member.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @Entity
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "members")
 public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    String name;
+    private String name;
 
-    int age;
+    private int age;
 
-    String mbti;
+    private String mbti;
 
-    public Member(String name, int age, String mbti) {
+    private String profileImageUrl;
+
+    public Member(String name, int age, String mbti, String profileImageUrl) {
         this.name = name;
         this.age = age;
         this.mbti = mbti;
+        this.profileImageUrl = profileImageUrl;
+    }
+
+    public void updateProfileImage(String imageUrl) {
+        this.profileImageUrl = imageUrl;
     }
 }
