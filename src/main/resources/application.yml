@@ -52,6 +52,29 @@ spring:
       path: /h2-console
 
 ---
+# ===== 로컬 Docker MySQL =====
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+  datasource:
+    url: jdbc:mysql://localhost:3307/test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 12345678
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  cloud:
+    aws:
+      s3:
+        enabled: false
+---
+
 # ===== 운영 (AWS RDS + Parameter Store) =====
 spring:
   config:
