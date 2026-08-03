@@ -51,6 +51,13 @@ spring:
       enabled: true
       path: /h2-console
 
+  cloud:
+    aws:
+      s3:
+        region: ap-northeast-2
+      credentials:
+        access-key: dummy
+        secret-key: dummy
 ---
 # ===== 로컬 Docker MySQL =====
 spring:
