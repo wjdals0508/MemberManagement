@@ -74,7 +74,27 @@ spring:
       s3:
         enabled: false
 ---
+# ===== 테스트 =====
+spring:
+  cloud:
+    aws:
+      s3:
+        region: ap-northeast-2
+      credentials:
+        access-key: dummy
+        secret-key: dummy
 
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+---
 # ===== 운영 (AWS RDS + Parameter Store) =====
 spring:
   config:
