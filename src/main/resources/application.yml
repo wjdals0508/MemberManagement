@@ -53,8 +53,8 @@ spring:
 
   cloud:
     aws:
-      s3:
-        region: ap-northeast-2
+      region:
+        static: ap-northeast-2
       credentials:
         access-key: dummy
         secret-key: dummy
@@ -101,8 +101,8 @@ spring:
 
   cloud:
     aws:
-      s3:
-        region: ap-northeast-2
+      region:
+        static: ap-northeast-2
 
 info:
   app:
