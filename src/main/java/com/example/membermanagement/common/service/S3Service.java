@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class S3Service {
 
-    private static final Duration PRESIGNED_URL_EXPIRATION = Duration.ofMinutes(10);
+    private static final Duration PRESIGNED_URL_EXPIRATION = Duration.ofDays(7);
 
     private final S3Template s3Template;
     private final S3Properties s3Properties;
