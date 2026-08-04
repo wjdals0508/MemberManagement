@@ -79,5 +79,9 @@ jobs:
           # ECR push
           docker push $IMAGE_URI:$SHORT_SHA
           
+          # latest 태그도 추가
+          docker tag $IMAGE_URI:$SHORT_SHA $IMAGE_URI:latest
+          docker push $IMAGE_URI:latest
+          
           # 결과 출력
           echo "✅ Pushed: $IMAGE_URI:$SHORT_SHA"
