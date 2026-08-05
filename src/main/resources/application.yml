@@ -111,3 +111,4 @@ info:
 app:
   s3:
     bucket-name: ${S3_BUCKET_NAME}
+    cloudfront-domain: dfzfcmzsyyen2.cloudfront.net

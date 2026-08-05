@@ -11,4 +11,5 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "app.s3")
 public class S3Properties {
     private String bucketName;
+    private String cloudfrontDomain;
 }

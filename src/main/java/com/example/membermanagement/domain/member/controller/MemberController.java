@@ -48,7 +48,7 @@ public class MemberController {
 
     @GetMapping("/{id}/profile-image")
     public ResponseEntity<GetProfileImgResponse> getDownloadUrl(@RequestParam String key) {
-        URL url = s3Service.getDownloadUrl(key);
-        return ResponseEntity.ok(new GetProfileImgResponse(url.toString()));
+        String url = s3Service.getDownloadUrlFromCloudFront(key);
+        return ResponseEntity.ok(new GetProfileImgResponse(url));
     }
 }

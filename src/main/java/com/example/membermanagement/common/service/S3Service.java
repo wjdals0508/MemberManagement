@@ -43,10 +43,16 @@ public class S3Service {
         return imageUrl.substring(imageUrl.indexOf(".com/") + 5);
     }
 
-    public URL getDownloadUrl(String key) {
+    // s3에서 직접 가져옴
+    public URL getDownloadUrlFromS3(String key) {
         return s3Template.createSignedGetURL(s3Properties.getBucketName(), key, PRESIGNED_URL_EXPIRATION);
     }
 
+    // CloudFront에서 가져옴
+    public String getDownloadUrlFromCloudFront(String key) {
+        String domain = s3Properties.getCloudfrontDomain();
+        return "https://" + domain + "/" + key;
+    }
 
     // Image file
     private static final List<String> ALLOWED_TYPES =
