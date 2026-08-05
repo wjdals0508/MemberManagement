@@ -7,6 +7,7 @@
 - [LV 3 - 프로필 사진 기능 추가와 권한 관리](#lv-3---프로필-사진-기능-추가와-권한-관리)
 - [LV 4 - Docker & CI/CD 파이프라인 구축](#lv-4---docker--cicd-파이프라인-구축)
 - [LV 5 - 고가용성 아키텍처와 보안 도메인 연결](#lv-5---고가용성-아키텍처와-보안-도메인-연결-alb--asg--https)
+- [LV 6 - 글로벌 성능 최적화 (CloudFront CDN)](#lv-6---글로벌-성능-최적화-cloudfront-cdn)
 
 ---
 
@@ -85,3 +86,24 @@
 ### 2. Target Group(대상 그룹) 이미지
 
 <img width="1152" height="540" alt="Target Group 등록된 대상 상태" src="https://github.com/user-attachments/assets/c6e61db1-14bf-4640-8c38-190e265fd5c0" />
+
+---
+
+## LV 6 - 글로벌 성능 최적화 (CloudFront CDN)
+
+### 1. CloudFront 이미지 URL
+
+> **URL** : https://dfzfcmzsyyen2.cloudfront.net/profile/344ea096-fc48-4e11-883d-0b9d1df7b7a6_YJM.jpg
+
+### 2. 프로필 사진 업로드
+
+<img width="470" height="278" alt="프로필 사진 업로드" src="https://github.com/user-attachments/assets/24c130ba-8120-4d03-bec6-2dedbc48f1c7" />
+
+### 3. 프로필 사진 다운로드
+
+<img width="473" height="268" alt="프로필 사진 다운로드" src="https://github.com/user-attachments/assets/f3ec32f3-fda2-41ca-b9eb-71ea91389e95" />
+
+### 4. 프로필 사진 확인
+
+<img width="647" height="438" alt="프로필 사진 확인" src="https://github.com/user-attachments/assets/97d3fae5-e6b2-42d3-91ca-0cde5bc5a640" />
+
